@@ -1,12 +1,11 @@
-FROM node:18-alpine
+FROM n8nio/n8n:latest
 
-WORKDIR /app
+# Set environment variables
+ENV N8N_HOST=0.0.0.0
+ENV N8N_PORT=10000
 
-COPY package*.json ./
-RUN npm install
+# Expose the port
+EXPOSE 10000
 
-COPY . .
-
-EXPOSE 5678
-
-CMD ["npm", "start"]
+# Start n8n
+CMD ["n8n"]
