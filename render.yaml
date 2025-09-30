@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: starter
+    envVars:
+      - key: N8N_ENCRYPTION_KEY
+        value: Zmekj1QufvLWyQQMRIfr5ziwtNkdzqKZF8r+5VZNl4g=
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: W1nning202I!
